@@ -36,7 +36,7 @@ app.get('/:inputDate', function(req, res) {
   }
   else if (eTime) {
     result.unix = eTime;
-    result.natural = moment(eTime).format(naturalFormat);
+    result.natural = moment(eTime * 1000).format(naturalFormat);
   }
   res.send(result);
 });
