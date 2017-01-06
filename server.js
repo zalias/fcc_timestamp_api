@@ -3,15 +3,17 @@ var moment = require('moment');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  var result = {
+  //return simple Page with Instructions (Use PUG)
+  }
+  res.send(result);
 });
 
 app.get('/:inputDate', function(req, res) {
   var inputDate = req.params.inputDate;
   var eTime = parseInt(inputDate);
   
-  var naturalFormat = "MMMM DD, YYYY";  
-
+  var naturalFormat = "MMMM DD, YYYY";
   var result = {
     "unix" : null,
     "natural" : null
