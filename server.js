@@ -41,6 +41,6 @@ app.get('/:inputDate', function(req, res) {
   res.send(result);
 });
 
-app.listen(process.env.PORT || 8080, process.env.IP, function () {
-  console.log('App listening at ', process.env.PORT  + ":" + process.env.IP);
+app.listen(process.env.PORT || 8080, function () {
+  console.log('App listening at ', process.env.PORT);
 });
