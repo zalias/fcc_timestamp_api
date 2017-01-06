@@ -1,12 +1,19 @@
 var express = require('express');
 var moment = require('moment');
+var pug = require('pug');
+
 var app = express();
 
+app.set('view engine', 'pug');
+
 app.get('/', function (req, res) {
+  //var now = moment.now();
   var result = {
-  //return simple Page with Instructions (Use PUG)
+    unix : moment().unix(),
+    natural: moment().format("MMMM DD, YYYY")
   }
-  res.send(result);
+  console.log(result);
+  res.render('index.pug', result);
 });
 
 app.get('/:inputDate', function(req, res) {
