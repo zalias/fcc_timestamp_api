@@ -1,12 +1,18 @@
 html
+  head
+    //link(rel='stylesheet', href='css/materialize.min.css')
+    script(src='/js/jquery-3.1.1.min.js')
   body
     h1.center-align FCC TimeStamp MicroService
     //Create a box with unix timestamp and corresponding date
-    div.card
-      p Pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
-      p If it does, it returns both the Unix timestamp and the natural language form of that date.
-      p If it does not contain a date or Unix timestamp, it returns null for those properties.
-      p Natural: 
-        span= natural
-      p Unix: 
-        span= unix
+    div.container
+      div.row
+        div.col.s12.m5
+          div.card
+            p Pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
+            p If it does, it returns both the Unix timestamp and the natural language form of that date.
+            p If it does not contain a date or Unix timestamp, it returns null for those properties.
+            p Natural: 
+              span= natural
+            p Unix: 
+              span= unix
